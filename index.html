@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeViz | Code Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            CodeViz
+        </div>
+        <nav>
+            <a href="index.html" class="active">
+                <span>🏠</span>
+                Home
+            </a>
+            <a href="editor.html">
+                <span>💻</span>
+                Code Editor
+            </a>
+            <a href="visualizer.html">
+                <span>▶</span>
+                Visualizer
+            </a>
+            <a href="history.html">
+                <span>🕘</span>
+                History
+            </a>
+            <a href="about.html">
+                <span>ℹ️</span>
+                About
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <p class="small-title">INTERACTIVE LEARNING PLATFORM</p>
+                <h1>Code Visualization</h1>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-text">
+                <div class="badge">
+                    🚀 Smart Code Visualizer
+                </div>
+                <h2>
+                    Understand Code.
+                    <br>
+                    <span>Step-by-Step.</span>
+                </h2>
+                <p>
+                    CodeViz executes your program step-by-step. 
+                    It acts as a smart engine, tracking variables, memory, and explaining loops and conditions perfectly in real-time.
+                </p>
+                <a href="editor.html" class="primary-btn">
+                    Start Visualizing
+                    <span>→</span>
+                </a>
+            </div>
+
+            <div class="code-card">
+                <div class="window-bar">
+                    <div class="window-buttons">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="window-title">example.cpp</div>
+                </div>
+                <div class="code-content">
+<pre><span class="line-number">1</span> <span class="keyword">#include</span> &lt;iostream&gt;
+<span class="line-number">2</span>
+<span class="line-number">3</span> <span class="keyword">int</span> main() {
+<span class="line-number">4</span>     <span class="keyword">int</span> x = <span class="number">10</span>;
+<span class="line-number">5</span>     <span class="keyword">int</span> y = <span class="number">20</span>;
+<span class="line-number active-code">6</span>     <span class="keyword">int</span> sum = x + y;
+<span class="line-number">7</span>
+<span class="line-number">8</span>     cout &lt;&lt; sum;
+<span class="line-number">9</span> }</pre>
+                </div>
+                <div class="execution-bar">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span class="execution-dot"></span>
+                        <span>Example Code Preview</span>
+                        <span class="execution-status">● Ready</span>
+                    </div>
+                    <a href="visualizer.html" id="runExampleBtn" class="primary-btn" style="padding: 4px 12px; font-size: 12px; border-radius: 4px; text-decoration: none;">
+                        ▶ Run in Visualizer
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="section-heading">
+                <p>FEATURES</p>
+                <h2>Everything you need to understand code</h2>
+            </div>
+            <div class="feature-grid">
+                <a href="visualizer.html" class="feature-card">
+                    <div class="feature-icon">▶</div>
+                    <h3>Step-by-Step Execution</h3>
+                    <p>
+                        Execute your program one line at a time
+                        and clearly understand the execution flow.
+                    </p>
+                </a>
+                <a href="visualizer.html" class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Variable Tracking</h3>
+                    <p>
+                        Track variable values and see how they
+                        change during program execution.
+                    </p>
+                </a>
+                <a href="visualizer.html" class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Memory Visualization</h3>
+                    <p>
+                        Visualize variables and understand how
+                        data is stored in memory.
+                    </p>
+                </a>
+                <a href="editor.html" class="feature-card" style="border: 1px solid #3b0764; background: #130a24;">
+                    <div class="feature-icon" style="color: #c084fc; background: #3b0764;">💡</div>
+                    <h3 style="color: #c084fc;">Logic Explanation</h3>
+                    <p>
+                        Get smart, detailed explanations for loops, conditions, and complex logic seamlessly.
+                    </p>
+                </a>
+            </div>
+        </section>
+
+        <section class="languages">
+            <div>
+                <p class="language-title">SUPPORTED LANGUAGES</p>
+                <h2>Learn programming visually</h2>
+            </div>
+            <div class="language-list">
+                <div class="language"><span>C++</span></div>
+                <div class="language"><span>C</span></div>
+                <div class="language"><span>Java</span></div>
+                <div class="language"><span>Python</span></div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 30px 10px; color: #64748b; font-size: 13px;">
+            CodeViz | Interactive Code Visualization Project
+        </footer>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

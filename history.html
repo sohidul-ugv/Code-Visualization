@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeViz | History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            CodeViz
+        </div>
+        <nav>
+            <a href="index.html">
+                <span>🏠</span>
+                Home
+            </a>
+            <a href="editor.html">
+                <span>💻</span>
+                Code Editor
+            </a>
+            <a href="visualizer.html">
+                <span>▶</span>
+                Visualizer
+            </a>
+            <a href="history.html" class="active">
+                <span>🕘</span>
+                History
+            </a>
+            <a href="about.html">
+                <span>ℹ️</span>
+                About
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="page-header">
+            <div>
+                <p class="small-title">EXECUTION HISTORY</p>
+                <h1>Recent Visualizations</h1>
+                <p class="page-description">
+                    Review your past code execution sessions.
+                </p>
+            </div>
+        </header>
+
+        <section class="editor-card" style="padding: 10px 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-muted); font-size: 14px; font-weight: bold;">
+                <span style="flex: 1;">File Name</span>
+                <span style="flex: 1;">Language</span>
+                <span style="flex: 1;">Date / Time</span>
+                <span style="flex: 1; text-align: right;">Action</span>
+            </div>
+            
+            <div id="historyList">
+                <div class="history-row" style="display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid var(--border-color); font-size: 14px;">
+                    <span style="flex: 1; color: var(--text-main); font-family: var(--font-code);">main.cpp</span>
+                    <span style="flex: 1; color: var(--accent-blue); font-weight: 600;">C++</span>
+                    <span style="flex: 1; color: var(--text-muted);">Sample Session</span>
+                    <span style="flex: 1; text-align: right;">
+                        <button class="replay-btn run-btn" data-lang="cpp" style="padding: 6px 12px; font-size: 12px;">Replay</button>
+                    </span>
+                </div>
+
+                <div class="history-row" style="display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid var(--border-color); font-size: 14px;">
+                    <span style="flex: 1; color: var(--text-main); font-family: var(--font-code);">Main.java</span>
+                    <span style="flex: 1; color: var(--accent-blue); font-weight: 600;">Java</span>
+                    <span style="flex: 1; color: var(--text-muted);">Sample Session</span>
+                    <span style="flex: 1; text-align: right;">
+                        <button class="replay-btn run-btn" data-lang="java" style="padding: 6px 12px; font-size: 12px;">Replay</button>
+                    </span>
+                </div>
+                
+                <div class="history-row" style="display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 14px;">
+                    <span style="flex: 1; color: var(--text-main); font-family: var(--font-code);">main.py</span>
+                    <span style="flex: 1; color: var(--accent-blue); font-weight: 600;">Python</span>
+                    <span style="flex: 1; color: var(--text-muted);">Sample Session</span>
+                    <span style="flex: 1; text-align: right;">
+                        <button class="replay-btn run-btn" data-lang="python" style="padding: 6px 12px; font-size: 12px;">Replay</button>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

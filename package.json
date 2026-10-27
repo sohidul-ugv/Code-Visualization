@@ -1,0 +1,21 @@
+{
+  "name": "code-visualization",
+  "version": "1.0.0",
+  "description": "CodeViz - Interactive Code Visualization Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y serve . -l 8080",
+    "dev": "npx -y serve . -l 8080",
+    "serve": "python -m http.server 8080"
+  },
+  "keywords": [
+    "code-visualization",
+    "education",
+    "cpp",
+    "python",
+    "java",
+    "c"
+  ],
+  "author": "",
+  "license": "MIT"
+}

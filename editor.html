@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeViz | Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            CodeViz
+        </div>
+        <nav>
+            <a href="index.html">
+                <span>🏠</span>
+                Home
+            </a>
+            <a href="editor.html" class="active">
+                <span>💻</span>
+                Code Editor
+            </a>
+            <a href="visualizer.html">
+                <span>▶</span>
+                Visualizer
+            </a>
+            <a href="history.html">
+                <span>🕘</span>
+                History
+            </a>
+            <a href="about.html">
+                <span>ℹ️</span>
+                About
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="page-header">
+            <div>
+                <p class="small-title">INTERACTIVE ENVIRONMENT</p>
+                <h1>Code Editor</h1>
+                <p class="page-description">
+                    Select a programming language and enter your code to visualize its execution.
+                </p>
+            </div>
+            <div class="language-selector">
+                <label for="language">Language:</label>
+                <select id="language">
+                    <option value="cpp">C++</option>
+                    <option value="c">C</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
+        </header>
+
+        <section class="editor-card">
+            <div class="editor-header">
+                <div class="file-info">
+                    <span class="file-icon">📄</span>
+                    <span id="fileName" class="file-name">main.cpp</span>
+                </div>
+                <div id="executionStatus" style="font-size: 13px; color: var(--accent-blue);">● Ready</div>
+            </div>
+            <div class="editor-area">
+                <div id="lineNumbers" class="line-numbers">1</div>
+                <textarea id="codeInput" placeholder="Write your code here..."></textarea>
+            </div>
+            <div class="editor-controls">
+                <button id="runButton" class="run-btn">
+                    <span>▶</span> Run Code
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

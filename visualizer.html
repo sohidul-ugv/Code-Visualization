@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeViz | Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            CodeViz
+        </div>
+        <nav>
+            <a href="index.html">
+                <span>🏠</span>
+                Home
+            </a>
+            <a href="editor.html">
+                <span>💻</span>
+                Code Editor
+            </a>
+            <a href="visualizer.html" class="active">
+                <span>▶</span>
+                Visualizer
+            </a>
+            <a href="history.html">
+                <span>🕘</span>
+                History
+            </a>
+            <a href="about.html">
+                <span>ℹ️</span>
+                About
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="page-header">
+            <div>
+                <p class="small-title">CODE VISUALIZER</p>
+                <h1>Program Execution</h1>
+                <p class="page-description">
+                    Follow your program step-by-step.
+                </p>
+            </div>
+            <div class="visualizer-language">
+                <span id="currentLanguage">C++</span>
+            </div>
+        </header>
+
+        <section class="visualizer-grid">
+            <div class="visualizer-card code-panel">
+                <div class="panel-header">
+                    <div>
+                        <span>&lt;/&gt;</span> Source Code
+                    </div>
+                    <span id="executionStatus" class="status-ready">● Ready</span>
+                </div>
+                <div id="codeDisplay" class="visualizer-code">
+                    <p class="empty-message">
+                        Run code from the Code Editor to start visualization.
+                    </p>
+                </div>
+            </div>
+
+            <div class="right-panels">
+                <div class="visualizer-card" style="border: 1px solid #3b0764; box-shadow: 0 4px 15px rgba(192, 132, 252, 0.1);">
+                    <div class="panel-header" style="background: #130a24;">
+                        <div>
+                            <span style="color: #c084fc; font-size: 16px;">💡</span> 
+                            <span style="color: #c084fc;">Logic Explanation</span>
+                        </div>
+                    </div>
+                    <div class="variables-panel" style="background: #0b0514; min-height: 80px;">
+                        <p id="aiExplanationText" class="empty-message" style="color: #d8b4fe; font-size: 14px; line-height: 1.6;">
+                            Click "Next Step" to get explanation...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="visualizer-card">
+                    <div class="panel-header">
+                        <div>📦 Variables</div>
+                    </div>
+                    <div id="variablesPanel" class="variables-panel">
+                        <p class="empty-message">No variables yet.</p>
+                    </div>
+                </div>
+
+                <div class="visualizer-card">
+                    <div class="panel-header">
+                        <div>🧠 Memory</div>
+                    </div>
+                    <div id="memoryPanel" class="memory-panel">
+                        <p class="empty-message">Memory will appear here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="visualizer-card output-card">
+            <div class="panel-header">
+                <div>💻 Output Console</div>
+                <span>Console</span>
+            </div>
+            <div id="outputPanel" class="output-panel">
+                <span class="console-symbol">&gt;</span>
+                <span>Program output will appear here.</span>
+            </div>
+        </section>
+
+        <div class="visualizer-controls">
+            <button id="previousButton" class="control-btn">← Previous</button>
+            <button id="nextButton" class="run-btn">Next Step →</button>
+            <button id="autoPlayButton" class="control-btn" style="display: inline-flex; align-items: center; gap: 6px;"><span>▶</span> Auto Run</button>
+            <button id="resetButton" class="control-btn reset-btn">↻ Reset</button>
+            <span id="stepCounter" class="control-btn" style="background: transparent; border: 1px solid var(--border-color); cursor: default; user-select: none;">Step 0 / 0</span>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
