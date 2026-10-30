@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeViz | Visualizer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <aside class="sidebar">
         <div class="logo">
@@ -42,7 +44,7 @@
                 <p class="small-title">CODE VISUALIZER</p>
                 <h1>Program Execution</h1>
                 <p class="page-description">
-                    Follow your program step-by-step.
+                    Follow your program step-by-step or click any line to jump directly.
                 </p>
             </div>
             <div class="visualizer-language">
@@ -53,10 +55,18 @@
         <section class="visualizer-grid">
             <div class="visualizer-card code-panel">
                 <div class="panel-header">
-                    <div>
+                    <div class="source-header-left">
                         <span>&lt;/&gt;</span> Source Code
+                        <span class="line-nav-hint">Click any line to jump</span>
                     </div>
-                    <span id="executionStatus" class="status-ready">● Ready</span>
+                    <div class="source-header-right">
+                        <div class="line-jump-control">
+                            <input type="number" id="lineJumpInput" class="line-jump-input" min="1"
+                                placeholder="Go to line..." title="Enter a line number and press Enter or click Go">
+                            <button id="lineJumpButton" class="line-jump-btn" type="button">Go</button>
+                        </div>
+                        <span id="executionStatus" class="status-ready">● Ready</span>
+                    </div>
                 </div>
                 <div id="codeDisplay" class="visualizer-code">
                     <p class="empty-message">
@@ -66,16 +76,18 @@
             </div>
 
             <div class="right-panels">
-                <div class="visualizer-card" style="border: 1px solid #3b0764; box-shadow: 0 4px 15px rgba(192, 132, 252, 0.1);">
+                <div class="visualizer-card"
+                    style="border: 1px solid #3b0764; box-shadow: 0 4px 15px rgba(192, 132, 252, 0.1);">
                     <div class="panel-header" style="background: #130a24;">
                         <div>
-                            <span style="color: #c084fc; font-size: 16px;">💡</span> 
+                            <span style="color: #c084fc; font-size: 16px;">💡</span>
                             <span style="color: #c084fc;">Logic Explanation</span>
                         </div>
                     </div>
                     <div class="variables-panel" style="background: #0b0514; min-height: 80px;">
-                        <p id="aiExplanationText" class="empty-message" style="color: #d8b4fe; font-size: 14px; line-height: 1.6;">
-                            Click "Next Step" to get explanation...
+                        <p id="aiExplanationText" class="empty-message"
+                            style="color: #d8b4fe; font-size: 14px; line-height: 1.6;">
+                            Click "Next Step" or click any line of code to get explanation...
                         </p>
                     </div>
                 </div>
@@ -114,12 +126,16 @@
         <div class="visualizer-controls">
             <button id="previousButton" class="control-btn">← Previous</button>
             <button id="nextButton" class="run-btn">Next Step →</button>
-            <button id="autoPlayButton" class="control-btn" style="display: inline-flex; align-items: center; gap: 6px;"><span>▶</span> Auto Run</button>
+            <button id="autoPlayButton" class="control-btn"
+                style="display: inline-flex; align-items: center; gap: 6px;"><span>▶</span> Auto Run</button>
             <button id="resetButton" class="control-btn reset-btn">↻ Reset</button>
-            <span id="stepCounter" class="control-btn" style="background: transparent; border: 1px solid var(--border-color); cursor: default; user-select: none;">Step 0 / 0</span>
+            <span id="stepCounter" class="control-btn"
+                style="background: transparent; border: 1px solid var(--border-color); cursor: default; user-select: none;">Step
+                0 / 0</span>
         </div>
     </main>
 
     <script src="script.js" defer></script>
 </body>
+
 </html>

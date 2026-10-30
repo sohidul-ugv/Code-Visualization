@@ -537,14 +537,81 @@ button {
 }
 
 .code-line-visual {
-    padding: 2px 15px;
+    padding: 3px 15px;
     display: flex;
     font-family: var(--font-code);
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.code-line-visual:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-left-color: rgba(59, 130, 246, 0.5);
+}
+
+.code-line-visual:hover .code-line-number {
+    color: var(--accent-blue);
 }
 
 .code-line-visual.active {
     background-color: rgba(56, 189, 248, 0.15);
     border-left: 3px solid var(--accent-blue);
+}
+
+.source-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.line-nav-hint {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--text-muted);
+    background: rgba(148, 163, 184, 0.12);
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.source-header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.line-jump-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.line-jump-input {
+    width: 105px;
+    padding: 4px 8px;
+    font-size: 12px;
+    background: var(--bg-main);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    outline: none;
+}
+
+.line-jump-input:focus {
+    border-color: var(--accent-blue);
+}
+
+.line-jump-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--accent-blue);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.line-jump-btn:hover {
+    background: var(--accent-blue-hover);
 }
 
 .code-line-number {
